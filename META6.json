@@ -1,0 +1,28 @@
+{
+  "auth": "zef:thundergnat",
+  "authors": [
+    "thundergnat"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Find all of the maximum or minimun elements od a list.",
+  "license": "Artistic-2.0",
+  "name": "List::Allmax",
+  "perl": "6.d",
+  "provides": {
+    "List::Allmax": "lib/List/Allmax.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "",
+  "tags": [
+    "all",
+    "all-max",
+    "all-min"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}

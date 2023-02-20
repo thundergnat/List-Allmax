@@ -1,0 +1,21 @@
+use Test;
+use List::Allmax;
+
+plan 6;
+
+my @list = [1,2,3,4,5,5,4,3,2,1,2,2,5,4,4];
+
+is-deeply( @list.&all-max, [5,5,5], 'all-max returns expected');
+
+is-deeply( @list.&all-max( :k ), [4,5,12], 'all-max keys returns expected');
+
+is-deeply( @list.classify({$_}).sort.List.&all-max( :by(+*.value) ), [2 => [2,2,2,2], 4 => [4,4,4,4]], 'all-max by comparitor returns expected');
+
+is-deeply @list.&all-min, [1,1], 'all-min returns expected';
+
+is-deeply @list.&all-min( :k ), [0,9], 'all-min keys returns expected';
+
+is-deeply @list.classify({$_}).sort.List.&all-min( :by(+*.value) ), [1 => [1,1], 3 => [3,3]], 'all-min by comparitor returns expected';
+
+
+done-testing;
