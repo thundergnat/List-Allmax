@@ -7,7 +7,7 @@
   ],
   "depends": [
   ],
-  "description": "Find all of the maximum or minimun elements od a list.",
+  "description": "Find all of the maximum or minimun elements of a list.",
   "license": "Artistic-2.0",
   "name": "List::Allmax",
   "perl": "6.d",
@@ -16,7 +16,7 @@
   },
   "resources": [
   ],
-  "source-url": "",
+  "source-url": "https://github.com/thundergnat/List-Allmax.git",
   "tags": [
     "all",
     "all-max",
