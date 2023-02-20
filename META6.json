@@ -7,7 +7,7 @@
   ],
   "depends": [
   ],
-  "description": "Find all of the maximum or minimun elements of a list.",
+  "description": "Find all of the maximum or minimum elements of a list.",
   "license": "Artistic-2.0",
   "name": "List::Allmax",
   "perl": "6.d",

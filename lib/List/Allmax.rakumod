@@ -59,7 +59,7 @@ multi all-min (*@list, Callable :&by = {$_}, :$k = False) is export  {
 
 =head1 NAME
 
-List::Allmax - Find all of the maximum or minimun elements of a list.
+List::Allmax - Find all of the maximum or minimum elements of a list.
 
 =head1 SYNOPSIS
 
@@ -71,20 +71,23 @@ say (^20).roll(50).&all-max;     # values
 
 say (^20).roll(50).&all-max: :k; # keys
 
+say [1,2,3,4,5,5,4,3,2,1,2,2,5,4,4].classify({$_}).sort.List.&all-max( :by(+*.value) );
+# [2 => [2,2,2,2], 4 => [4,4,4,4]]
+
 =end code
 
 =head1 DESCRIPTION
 
-Raku provides max and min operators to find the maximum or minimum elements of a
+Raku provides max and min routines to find the maximum or minimum elements of a
 list. If there is more than one value that evaluates to the maximum, (minimum)
-only the first is reported, no matter how many there are. This module provides a
-remedy for that.
+only the first is reported, no matter how many there may be. This module
+provides a remedy for that.
 
 Provides the routines all-max() and all-min() that return _all_ of the elements
 that evaluate to maximum or minimum value.
 
 Similar to the built-ins, you may request either a list of values or a list of
-indexes (keys) where those values are located.
+indicies (keys) where those values are located.
 
 If you want to compare based on something other than the values of the individual
 elements, supply a :by() Callable block to be used as an evaluator. Defaults to
@@ -92,7 +95,7 @@ elements, supply a :by() Callable block to be used as an evaluator. Defaults to
 
 
 Note: Only operates on Positional objects. If want to use it on a Hash or some
-other Associative type, coerce to a Listy object first.
+other Associative type, coerce to a Listy type object first.
 
 
 =head1 AUTHOR
