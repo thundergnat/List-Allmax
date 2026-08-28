@@ -1,6 +1,6 @@
 unit module List::Allmax;
 
-sub all-max (*@list, Callable :&by = {$_}, :$k = False) is export  {
+sub all-max (*@list, :&by = {$_}, :$k = False) is export  {
     if @list.is-lazy { X::Cannot::Lazy.new(action =>'all-max').throw }
     my @max-list;
     my $max = @list[0];
@@ -27,7 +27,7 @@ sub all-max (*@list, Callable :&by = {$_}, :$k = False) is export  {
     @max-list
 }
 
-sub all-min (*@list, Callable :&by = {$_}, :$k = False) is export  {
+sub all-min (*@list, :&by = {$_}, :$k = False) is export  {
     if @list.is-lazy { X::Cannot::Lazy.new(action =>'all-min').throw }
     my @min-list;
     my $min = @list[0];
